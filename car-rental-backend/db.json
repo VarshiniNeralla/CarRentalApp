@@ -133,56 +133,6 @@
     }
   ],
   "bookings": [
-    {
-      "id": "0f6d03fc90f4a",
-      "userId": "f454",
-      "carId": null,
-      "carDetails": "AUDI - Hexa (₹3699/day)",
-      "carImage": "car-967470_1280.webp",
-      "userName": "Varshini",
-      "email": "nerallavarshini@gmail.com",
-      "pickupDate": "2025-03-26",
-      "pickupTime": "09:30",
-      "returnDate": "2025-03-29",
-      "dropoffTime": "10:30",
-      "totalPrice": 11097,
-      "aadharFile": "uploads/aadhar .pdf",
-      "licenseFile": "uploads/aadhar .pdf",
-      "status": "Confirmed"
-    },
-    {
-      "id": "2844430b0a37a",
-      "userId": "f454",
-      "carId": "554a",
-      "carDetails": "VOLVO - Scorpio (₹4699/day)",
-      "carImage": "scorpio.png",
-      "userName": "vikky",
-      "email": "vikky@gmail.com",
-      "pickupDate": "2025-03-25",
-      "pickupTime": "16:00",
-      "returnDate": "2025-03-28",
-      "dropoffTime": "22:00",
-      "totalPrice": 14097,
-      "aadharFile": "uploads/aadhar .pdf",
-      "licenseFile": "uploads/license.pdf",
-      "status": "Cancelled"
-    },
-    {
-      "id": "7f8b47c2cf9c1",
-      "userId": "f454",
-      "carId": "6a3d",
-      "carDetails": "FORD - Fiesta (₹6800/day)",
-      "carImage": "black_car-removebg-preview.png",
-      "userName": "Vignesh",
-      "email": "vikky@gmail.com",
-      "pickupDate": "2025-03-27",
-      "pickupTime": "10:00",
-      "returnDate": "2025-03-29",
-      "dropoffTime": "10:00",
-      "totalPrice": 13600,
-      "aadharFile": "uploads/aadhar .pdf",
-      "licenseFile": "uploads/license.pdf",
-      "status": "Confirmed"
-    }
+    
   ]
 }
