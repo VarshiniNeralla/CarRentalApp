@@ -1,34 +1,41 @@
+
+
 // const jsonServer = require("json-server");
 // const path = require("path");
 
 // const server = jsonServer.create();
 // const router = jsonServer.router("db.json");
 // const middlewares = jsonServer.defaults({
-//   static: path.join(__dirname, "uploads") // Serve static files from "uploads"
+//   static: path.join(__dirname, "uploads") 
 // });
 
 // server.use(middlewares);
-// server.use(router);
+// server.use("/api", router); 
 
-// const PORT = 3000;
+// const PORT = process.env.PORT || 3000;
 // server.listen(PORT, () => {
 //   console.log(`JSON Server is running on http://localhost:${PORT}`);
 // });
 
 
-const jsonServer = require("json-server");
-const path = require("path");
+// server.js
+const express = require('express');
+const jsonServer = require('json-server');
+const path = require('path');
 
-const server = jsonServer.create();
-const router = jsonServer.router("db.json");
-const middlewares = jsonServer.defaults({
-  static: path.join(__dirname, "uploads") 
-});
+const app = express();
+const router = jsonServer.router('db.json');
+const middlewares = jsonServer.defaults();
 
-server.use(middlewares);
-server.use("/api", router); // Optional: prefix API for clarity
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+
+app.use(middlewares);
+
+app.use(jsonServer.bodyParser);
+
+app.use('/api', router);
 
 const PORT = process.env.PORT || 3000;
-server.listen(PORT, () => {
-  console.log(`JSON Server is running on http://localhost:${PORT}`);
+app.listen(PORT, () => {
+  console.log(`Server is running at http://localhost:${PORT}`);
 });
