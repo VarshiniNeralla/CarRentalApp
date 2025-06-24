@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule, Router } from '@angular/router';
+import { environment } from '../../../../../environments/environment';
 
 @Component({
   selector: 'app-get-bookings',
@@ -25,48 +26,26 @@ export class GetBookingsComponent {
     return Math.ceil(diffTime / (1000 * 60 * 60 * 24)); 
   }
 
-
-  // loadBookings() {
-  //   this.http.get<any[]>('http://localhost:3000/bookings').subscribe((data) => {
-  //     this.bookings = data;
-  //   });
-  // }
-
   loadBookings() {
-    this.http.get<any[]>('http://localhost:3000/bookings').subscribe((data) => {
+    this.http.get<any[]>(`${environment.apiUrl}/bookings`).subscribe((data) => {
       this.bookings = data.map(booking => ({
         ...booking,
-        aadharFile: booking.aadharFile ? `http://localhost:3000/${booking.aadharFile}` : null,
-        licenseFile: booking.licenseFile ? `http://localhost:3000/${booking.licenseFile}` : null
+        aadharFile: booking.aadharFile ? `${environment.apiUrl.replace('/api', '')}/${booking.aadharFile}` : null,
+        licenseFile: booking.licenseFile ? `${environment.apiUrl.replace('/api', '')}/${booking.licenseFile}` : null
       }));
     });
   }
 
-  // acceptBooking(bookingId: string) {
-  //   this.http.patch(`http://localhost:3000/bookings/${bookingId}`, { status: 'Confirmed' }).subscribe(() => {
-  //     this.bookings = this.bookings.map(booking =>
-  //       booking.id === bookingId ? { ...booking, status: 'Confirmed' } : booking
-  //     );
-  //   });
-  // }
-
   acceptBooking(bookingId: string) {
-    this.http.patch(`http://localhost:3000/bookings/${bookingId}`, { status: 'Confirmed' }).subscribe(() => {
+    this.http.patch(`${environment.apiUrl}/bookings/${bookingId}`, { status: 'Confirmed' }).subscribe(() => {
       this.bookings = this.bookings.map(booking =>
         booking.id === bookingId ? { ...booking, status: 'Confirmed By Admin' } : booking
       );
     });
   }
 
-  // declineBooking(bookingId: string) {
-  //   this.http.patch(`http://localhost:3000/bookings/${bookingId}`, { status: 'Cancelled' }).subscribe(() => {
-  //     this.bookings = this.bookings.map(booking =>
-  //       booking.id === bookingId ? { ...booking, status: 'Cancelled' } : booking
-  //     );
-  //   });
-  // }
   declineBooking(bookingId: string) {
-    this.http.patch(`http://localhost:3000/bookings/${bookingId}`, { status: 'Cancelled' }).subscribe(() => {
+    this.http.patch(`${environment.apiUrl}/bookings/${bookingId}`, { status: 'Cancelled' }).subscribe(() => {
       this.bookings = this.bookings.map(booking =>
         booking.id === bookingId ? { ...booking, status: 'Cancelled By Admin' } : booking
       );
