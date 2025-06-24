@@ -22,7 +22,7 @@ const path = require("path");
 const server = jsonServer.create();
 const router = jsonServer.router("db.json");
 const middlewares = jsonServer.defaults({
-  static: path.join(__dirname, "uploads") // Optional: static file serving
+  static: path.join(__dirname, "uploads") 
 });
 
 server.use(middlewares);
