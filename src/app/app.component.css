@@ -1,0 +1,61 @@
+.namee{
+    font-style: italic;
+    font-weight: bold;
+    background: linear-gradient(0deg, rgba(255, 0, 198, 1) 57%, rgba(255, 255, 255, 1) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -o-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0px 0px 8px rgba(255, 0, 198, 0.8),
+        /* 0px 0px 15px rgba(255, 0, 198, 0.6), */
+        0px 0px 20px rgba(255, 0, 198, 0.4);
+    padding-bottom: 5px;
+}
+
+.custom-navbar {
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-title a {
+    color: white !important;
+    margin-left: 10px;
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+
+
+.nav-links a {
+ 
+    color: white;
+    margin-left: 15px;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+.rent{
+    font-weight: bold;
+    background: linear-gradient(0deg, rgba(255, 0, 198, 1) 57%, rgba(255, 255, 255, 1) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -o-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0px 0px 8px rgba(255, 0, 198, 0.8),
+        0px 0px 15px rgba(255, 0, 198, 0.6),
+        0px 0px 20px rgba(255, 0, 198, 0.4);
+}

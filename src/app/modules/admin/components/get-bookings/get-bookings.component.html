@@ -1,0 +1,90 @@
+<!-- <div class="bg">
+    <div *ngIf="bookings.length > 0; else noBookings" class="bookings-container">
+        <div class="car-card" *ngFor="let booking of bookings">
+            <img [src]="'/images/' + booking.carImage" alt="Car Image" class="car-image" />
+            <h3>{{ booking.carDetails }}</h3>
+            <p>User: <span>{{ booking.userName }}</span></p>
+            <p>Email: <span>{{ booking.email }}</span></p>
+            <p>Pickup Date: <span>{{ booking.pickupDate }}</span></p>
+            <p>Return Date: <span>{{ booking.returnDate }}</span></p>
+            <p>Total Price: <span>₹{{ booking.totalPrice }}</span></p>
+            <p>Number of Days: <span>{{ getNumberOfDays(booking.pickupDate, booking.returnDate) }}</span></p>
+            <p>Status: 
+                <span [ngClass]="{
+                    'confirmed': booking.status === 'Confirmed', 
+                    'cancelled': booking.status === 'Cancelled', 
+                    'pending': booking.status === 'Pending'
+                }">
+                    {{ booking.status }}
+                </span>
+            </p>
+            
+            <div *ngIf="booking.status === 'Pending'">
+                <button class="btn" nzSize="small" nz-button nzType="primary" (click)="acceptBooking(booking.id)">
+                    Accept
+                </button>
+                <button class="btn2" nzSize="small" nz-button nzType="danger" (click)="declineBooking(booking.id)">
+                    Decline
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <ng-template #noBookings>
+        <p class="No-Bookings">No bookings found.</p>
+    </ng-template>
+</div> 
+  -->
+
+<div class="bg">
+    <div *ngIf="bookings.length > 0; else noBookings" class="bookings-container">
+        <div class="car-card" *ngFor="let booking of bookings">
+            <img [src]="'/images/' + booking.carImage" alt="Car Image" class="car-image" />
+            <h3>{{ booking.carDetails }}</h3>
+            <p>User: <span>{{ booking.userName }}</span></p>
+            <p>Email: <span>{{ booking.email }}</span></p>
+            <p>Pickup Date: <span>{{ booking.pickupDate }}</span></p>
+            <p>Pickup Time: <span>{{ booking.pickupTime }}</span></p>
+            <p>Return Date: <span>{{ booking.returnDate }}</span></p>
+            <p>Drop-off Time: <span>{{ booking.dropoffTime }}</span></p>
+            <p>Total Price: <span>₹{{ booking.totalPrice }}</span></p>
+            <p>Number of Days: <span>{{ getNumberOfDays(booking.pickupDate, booking.returnDate) }}</span></p>
+
+            <p>Aadhar:
+                <!-- <a *ngIf="booking.aadharFile" [href]="booking.aadharFile" target="_blank">View Aadhar</a>
+                <span *ngIf="!booking.aadharFile">Not Uploaded</span> -->
+                <a *ngIf="booking.aadharFile" [href]="booking.aadharFile" target="_blank">View Aadhar</a>
+                <span *ngIf="!booking.aadharFile">Not Uploaded</span>
+                  
+            </p>
+
+            
+            <p>License:
+                <a *ngIf="booking.licenseFile" [href]="booking.licenseFile" target="_blank">View License</a>
+                <span *ngIf="!booking.licenseFile">Not Uploaded</span>
+            </p>
+            
+            <p>Status:
+                <span [ngClass]="{
+                    'confirmed': booking.status === 'Confirmed', 
+                    'cancelled': booking.status === 'Cancelled', 
+                    'pending': booking.status === 'Pending'
+                }">
+                    {{ booking.status }}
+                </span>
+            </p>
+            <div *ngIf="booking.status === 'Pending'">
+                <button class="btn" nzSize="small" nz-button nzType="primary" (click)="acceptBooking(booking.id)">
+                    Accept
+                </button>
+                <button class="btn2" nzSize="small" nz-button nzType="danger" (click)="declineBooking(booking.id)">
+                    Decline
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <ng-template #noBookings>
+        <p class="No-Bookings">No bookings found.</p>
+    </ng-template>
+</div>

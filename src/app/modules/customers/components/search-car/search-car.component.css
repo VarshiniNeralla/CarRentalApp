@@ -1,0 +1,314 @@
+.bg {
+    background: url('../../../../../../images/wall.avif') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inner-content {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 100px;
+}
+
+.filter-grid {
+    width: 320px;
+    margin-top: -150px;
+    margin-left: 20px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+button {
+    background: linear-gradient(0deg, rgba(255, 0, 198, 1) 57%, rgba(255, 255, 255, 1) 100%) !important;
+    border: none;
+    border-radius: 25px;
+    width: 100%;
+    font-weight: bold;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    line-height: normal;
+}
+
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 15px rgba(255, 0, 198, 0.5);
+}
+
+
+
+
+.filter-grid {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.filter-select-dropdown {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+nz-form-item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+}
+
+nz-form-label {
+    width: 120px;
+    text-align: left;
+    font-weight: bold;
+    font-size: 22px;
+    background: white;
+    text-shadow: 0px 0px 8px rgba(255, 0, 198, 0.8);
+    background-clip: text;
+    text-shadow: 0px 0px 8px rgb(255, 255, 255, 1),
+        0px 0px 15px rgba(255, 255, 255, 0.6),
+        0px 0px 20px rgba(255, 255, 255, 0.4);
+}
+
+
+nz-form-control {
+    flex: 1;
+}
+
+nz-select {
+    width: 100%;
+    padding: 5px;
+    border: 2px solid rgba(255, 0, 198, 0.5);
+    border-radius: 8px;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+}
+
+nz-select:focus {
+    border-color: rgba(255, 0, 198, 1);
+    box-shadow: 0 0 10px rgba(255, 0, 198, 0.3);
+}
+
+.car-image {
+    width: 80%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* 
+.parent {
+    background: url('../../../../../../images/wall.avif') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.child {
+    padding: 10px;
+    width: 780px;
+    box-shadow: 1px 1px 15px -7px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+h2 {
+    font-size: 22px;
+    background: linear-gradient(0deg, rgba(255, 0, 198, 1) 57%, rgba(255, 255, 255, 1) 100%);
+    background: white;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -o-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    padding-bottom: 3px;
+    text-shadow: 0px 0px 8px rgba(255, 0, 198, 0.8);
+
+}
+
+p {
+    text-align: justify;
+    font-size: 14px;
+    font-weight: bold;
+    background: linear-gradient(0deg, rgb(255, 255, 255) 57%, rgb(255, 255, 255) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -o-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    padding-bottom: 3px;
+    text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+span {
+    background: white;
+    text-shadow: 0px 0px 8px rgba(255, 0, 198, 0.5);
+    background-clip: text;
+}
+
+h5 {
+    font-size: 19px;
+    font-weight: bold;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(0deg, rgba(255, 0, 198, 1) 57%, rgba(255, 255, 255, 1) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -o-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    padding-bottom: 5px;
+    text-align: center;
+} */
+
+.parent {
+    background: url('../../../../../../images/wall.avif') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin-top: -70px;
+}
+
+.child {
+    width: 80%;
+    max-width: 1200px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 1px 1px 15px -7px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.car-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.car-card {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    width: 100%;
+    box-shadow: 1px 1px 10px -5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.car-card:hover {
+    transform: scale(1.02);
+}
+
+.car-content {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 20px;
+}
+
+.car-image-container {
+    flex: 0 0 200px;
+}
+
+.car-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.car-details-container {
+    flex-grow: 1;
+}
+
+h2 {
+
+    font-size: 22px;
+    background: linear-gradient(0deg, rgba(255, 0, 198, 1) 57%, rgba(255, 255, 255, 1) 100%);
+    background: white;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -o-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    padding-bottom: 3px;
+    text-shadow: 0px 0px 8px rgba(255, 0, 198, 0.8);
+}
+
+h5 {
+    text-align: center;
+    font-size: 19px;
+    font-weight: bold;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* Ensures content is centered and spaced properly */
+    align-items: center;
+    gap: 8px;
+    /* Adds spacing between elements */
+    background: linear-gradient(0deg, rgba(255, 0, 198, 1) 57%, rgba(255, 255, 255, 1) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -o-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    padding-bottom: 5px;
+    /* text-shadow: 0px 0px 10px rgba(255, 0, 198, 0.8); */
+    text-align: center;
+}
+
+span {
+    display: inline-block;
+    margin: 5px 0;
+    background: white;
+    text-shadow: 0px 0px 8px rgba(255, 0, 198, 0.8);
+    background-clip: text;
+}
+
+p {
+    text-align: justify;
+    font-size: 14px;
+    font-weight: bold;
+    /* background: linear-gradient(0deg, rgb(0, 0, 0) 57%, rgba(255, 255, 255, 1) 100%); */
+    background: linear-gradient(0deg, rgb(255, 255, 255) 57%, rgb(255, 255, 255) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -o-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    padding-bottom: 3px;
+    text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+}

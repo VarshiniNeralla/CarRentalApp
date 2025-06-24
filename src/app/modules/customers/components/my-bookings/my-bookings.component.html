@@ -1,0 +1,30 @@
+<div class="bg">
+    <div *ngIf="bookings.length > 0; else noBookings" class="bookings-container">
+        <div class="car-card" *ngFor="let booking of bookings">
+            <img [src]="'/images/' + booking.carImage" alt="Car Image" class="car-image" />
+            <h3>{{ booking.carDetails }}</h3>
+            <p>Pickup Date: <span>{{ booking.pickupDate }}</span></p>
+            <p>Return Date: <span>{{ booking.returnDate }}</span></p>
+            <p>Pickup Time: <span>{{ booking.pickupTime }}</span></p>
+            <p>Dropoff Time: <span>{{ booking.dropoffTime }}</span></p>
+            <p>Total Price: <span>₹{{ booking.totalPrice }}</span></p>
+            <p>Status: <span>{{ booking.status }}</span></p>
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <div *ngIf="booking.status !== 'Cancelled' && showButtons">
+                    <!-- <button class="btn" nzSize="small" nz-button nzType="primary" routerLink="">
+                        Update
+                    </button> -->
+                    <button class="btn2" nzSize="small" nz-button nzType="primary" routerLink="" (click)="cancelBooking(booking.id)" 
+                    [disabled]="booking.status === 'Cancelled'">
+                        Cancel
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <ng-template #noBookings>
+        <p class="No-Bookings">No bookings found.</p>
+    </ng-template>
+</div>

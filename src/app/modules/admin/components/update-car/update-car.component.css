@@ -1,0 +1,162 @@
+/* .bg {
+    background: url('../../../../../../images/outrun-neon-dark-background-purple-2560x1080-4523.jpg') no-repeat center center;
+    width: 100%;
+    height: 140vh;
+} */
+
+.bg {
+    background: url('../../../../../../images/wall.avif') no-repeat center center;
+    background-size: cover;  
+    background-attachment: fixed;  
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100vw;  
+    height: 130vh; 
+}
+
+
+.parent {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.file-name {
+    font-weight: bold;
+    background: linear-gradient(0deg, rgba(255, 0, 198, 1) 57%, rgba(255, 255, 255, 1) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0px 0px 8px rgba(255, 0, 198, 0.8),
+        0px 0px 15px rgba(255, 0, 198, 0.6),
+        0px 0px 20px rgba(255, 0, 198, 0.4);
+    display: block;
+    padding-top: 10px;
+    /* margin-top: -35px;
+    margin-left: 30px; */
+}
+
+.file-name[hidden] {
+    display: none;
+}
+
+
+
+h2 {
+    font-weight: bold;
+    background: linear-gradient(0deg, rgba(255, 0, 198, 1) 57%, rgba(255, 255, 255, 1) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -o-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0px 0px 8px rgba(255, 0, 198, 0.8),
+        0px 0px 15px rgba(255, 0, 198, 0.6),
+        0px 0px 20px rgba(255, 0, 198, 0.4);
+    padding-bottom: 5px;
+    padding-top: 15px;
+}
+
+.child {
+    padding: 10px;
+    width: 100%;
+    max-width: 680px;
+    /* background-color: white; */
+    box-shadow: 1px 1px 15px -7px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.imgDiv {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-badge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile {
+    height: 180px;
+    width: 180px;
+    margin-bottom: 5px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.upload-label {
+    cursor: pointer;
+}
+
+.upload-icon {
+    width: 70px;
+    height: 35px;
+    margin-top: 10px;
+}
+
+.login-form-button {
+    margin-top: 20px;
+    width: 100%;
+}
+
+button {
+    background: linear-gradient(0deg, rgba(255, 0, 198, 1) 57%, rgba(255, 255, 255, 1) 100%) !important;
+    border: none;
+    width: 100%;
+    font-weight: bold;
+}
+
+button:focus,
+button:active,
+button:active {
+    background: linear-gradient(0deg, rgba(255, 0, 198, 1) 57%, rgba(255, 255, 255, 1) 100%) !important;
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+.image-preview{
+    margin-top: 10px;
+    margin-left: 100px;
+}
+
+.circle-image{
+    margin-left: 140px ;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.preview-image{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.file-upload-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.file-upload-label{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+input[type="file"]{
+    display: none;
+}

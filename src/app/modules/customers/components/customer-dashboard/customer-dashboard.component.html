@@ -1,0 +1,16 @@
+<div class="bg">
+  <div *ngFor="let car of cars" class="car-card">
+    <img [src]="'/images/' + car.img" alt="{{ car.name }}" class="car-image">
+    <h3 style="font-size: 25px;">{{ car.name }}</h3>
+    <p>Brand: <span>{{ car.brand }}</span></p>
+    <p>Type: <span>{{ car.type }}</span></p>
+    <p>Color: <span>{{ car.color }}</span></p>
+    <p>Transmission: <span>{{ car.transmission }}</span></p>
+    <p>Price:<span> ₹{{ car.price }}/day</span></p>
+    <!-- <p>Description: <span>{{ car.description }}</span></p> -->
+    <!-- <p><span class="gradient-text">Description:</span> <span>{{ car.description }}</span></p> -->
+     <div style="float: right;">
+        <button style="margin-left: 10px;" nzSize="small" nz-button nzType="primary" routerLink="/customer/book/{{car.id}}">Book</button>
+     </div>
+  </div>
+</div>

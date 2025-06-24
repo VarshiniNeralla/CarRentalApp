@@ -1,0 +1,145 @@
+<!-- <div class="bg">
+  <div class="booking-container">
+    <h2>Car Details</h2>
+
+    <form (submit)="bookCar(); $event.preventDefault();">
+      <div *ngIf="selectedCar">
+        <label>Selected Car</label>
+        <input type="text" [value]="selectedCar.brand + ' - ' + selectedCar.name + ' (₹' + selectedCar.price + '/day)'"
+          readonly>
+      </div>
+
+      <label for="userName">Your Name</label>
+      <input type="text" id="userName" [(ngModel)]="booking.userName" name="userName" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" [(ngModel)]="booking.email" name="email" required>
+
+      <label for="pickupDate">Pickup Date</label>
+      <input type="date" id="pickupDate" [(ngModel)]="booking.pickupDate" name="pickupDate" required
+        (change)="calculateTotalPrice()">
+
+      <label for="returnDate">Return Date</label>
+      <input type="date" id="returnDate" [(ngModel)]="booking.returnDate" name="returnDate" required
+        (change)="calculateTotalPrice()">
+
+      <p *ngIf="totalPrice" class="price">Total Price: ₹{{ totalPrice }}</p>
+
+      <button type="submit">Book Now</button>
+    </form>
+
+    <p *ngIf="message" class="success-message">{{ message }}</p>
+  </div>
+</div> -->
+<!-- <div class="bg">
+  <div class="booking-container">
+    <h2>Car Details</h2>
+
+    <form (submit)="bookCar(); $event.preventDefault();">
+      <div *ngIf="selectedCar">
+        <label>Selected Car</label>
+        <input type="text" [value]="selectedCar.brand + ' - ' + selectedCar.name + ' (₹' + selectedCar.price + '/day)'"
+          readonly>
+      </div>
+
+      <label for="userName">Your Name</label>
+      <input type="text" id="userName" [(ngModel)]="booking.userName" name="userName" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" [(ngModel)]="booking.email" name="email" required>
+
+      <label for="pickupDate">Pickup Date</label>
+      <input type="date" id="pickupDate" [(ngModel)]="booking.pickupDate" name="pickupDate" required
+        (change)="calculateTotalPrice()">
+
+      <label for="returnDate">Return Date</label>
+      <input type="date" id="returnDate" [(ngModel)]="booking.returnDate" name="returnDate" required
+        (change)="calculateTotalPrice()">
+
+      <label for="aadhar">Upload Aadhar</label>
+      <input type="file" id="aadhar" (change)="handleFileUpload($event, 'aadhar')" accept=".pdf,.jpg,.png" required>
+
+      <label for="license">Upload Driving License</label>
+      <input type="file" id="license" (change)="handleFileUpload($event, 'license')" accept=".pdf,.jpg,.png" required>
+
+      <p *ngIf="totalPrice" class="price">Total Price: ₹{{ totalPrice }}</p>
+
+      <button type="submit">Book Now</button>
+    </form>
+
+    <p *ngIf="message" class="success-message">{{ message }}</p>
+  </div>
+</div> -->
+
+
+<div class="bg">
+  <div class="booking-container">
+    <h2>Car Details</h2>
+
+    <form (submit)="bookCar(); $event.preventDefault();">
+      <div *ngIf="selectedCar">
+        <label>Selected Car</label>
+        <input type="text" [value]="selectedCar.brand + ' - ' + selectedCar.name + ' (₹' + selectedCar.price + '/day)'"
+          readonly>
+      </div>
+
+      <label for="userName">Your Name</label>
+      <input type="text" id="userName" [(ngModel)]="booking.userName" name="userName" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" [(ngModel)]="booking.email" name="email" required>
+
+      <label for="pickupDate">Pickup Date</label>
+      <input type="date" id="pickupDate" [(ngModel)]="booking.pickupDate" name="pickupDate" required
+        (change)="calculateTotalPrice()">
+
+      <!-- <label for="dropoffTime">Pickup Time:</label>
+        <input type="time" id="pickupTime" [(ngModel)]="booking.pickupTime" />
+
+      <label for="returnDate">Return Date:</label>
+      <input type="date" id="returnDate" [(ngModel)]="booking.returnDate" />
+
+      <label for="dropoffTime">Dropoff Time:</label>
+      <input type="time" id="dropoffTime" [(ngModel)]="booking.dropoffTime" /> -->
+      <label for="dropoffTime">Pickup Time:</label>
+      <input type="time" id="pickupTime" [(ngModel)]="booking.pickupTime" name="pickupTime" />
+      <label for="returnDate">Return Date:</label>
+      <input type="date" id="returnDate" [(ngModel)]="booking.returnDate" name="returnDate"
+        (change)="calculateTotalPrice()" />
+      <label for="dropoffTime">Dropoff Time:</label>
+      <input type="time" id="dropoffTime" [(ngModel)]="booking.dropoffTime" name="dropoffTime" />
+
+
+      <!-- File Uploads -->
+      <label for="aadharUpload">Upload Aadhar:</label>
+      <input type="file" id="aadharUpload" (change)="handleFileUpload($event, booking.carId, 'aadhar')" />
+
+      <label for="licenseUpload">Upload License:</label>
+      <input type="file" id="licenseUpload" (change)="handleFileUpload($event, booking.carId, 'license')" />
+
+
+      <p *ngIf="totalPrice" class="price">Total Price: ₹{{ totalPrice }}</p>
+
+      <button type="submit">Book Now</button>
+    </form>
+
+    <p *ngIf="message" class="success-message">{{ message }}</p>
+  </div>
+</div>
+
+
+
+<!-- <label for="licenseUpload">Upload License:</label>
+      <input type="file" id="licenseUpload" (change)="handleFileUpload($event, booking.carId, 'license')"
+        accept=".png, .jpg, .jpeg, .pdf" required /> -->
+
+
+<!--<label for="returnDate">Return Date</label>
+      <input type="date" id="returnDate" [(ngModel)]="booking.returnDate" name="returnDate" required
+        (change)="calculateTotalPrice()">
+
+      <label for="dropoffTime">Drop-off Time</label>
+      <input type="time" id="dropoffTime" [(ngModel)]="booking.dropoffTime" name="dropoffTime" required>
+
+      <label for="aadharUpload">Upload Aadhar:</label>
+      <input type="file" id="aadharUpload" (change)="handleFileUpload($event, booking.carId, 'aadhar')" accept=".png, .jpg, .jpeg, .pdf" required /> -->

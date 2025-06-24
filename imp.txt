@@ -1,0 +1,11 @@
+json-server --watch db.json --port 3000
+
+
+color: rgb(243, 0, 255);
+color: linear-gradient(90deg, rgba(243, 0, 255, 1) 10%, rgba(255, 0, 215, 1) 50%, rgba(255, 0, 185, 1) 79%);
+
+
+
+
+background: rgb(255,0,185);
+background: linear-gradient(0deg, rgba(255,0,185,1) 0%, rgba(0,0,0,1) 100%);

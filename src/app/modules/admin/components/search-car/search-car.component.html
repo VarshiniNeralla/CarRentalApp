@@ -1,0 +1,134 @@
+<div class="bg inner-content">
+    <nz-spin [nzSpinning]="isSpinning" [nzSize]="'large'" nzTip="Working...">
+        <div class="dashboard-filter">
+            <div class="filter-grid" [formGroup]="searchCarForm">
+                <div class="filter-select-dropdown filter-fields-width">
+                    <nz-form-item>
+                        <nz-form-label nzFor="gender">Brand</nz-form-label>
+                        <nz-form-control nzErrorTip="This Input is Required">
+                            <nz-select nzShowSearch nzAllowClear nzPlaceHolder="Select a Brand Name"
+                                formControlName="brand">
+                                <nz-option *ngFor="let brand of listOfBrands" nzLabel="{{ brand }}"
+                                    nzValue="{{ brand }}"></nz-option>
+                            </nz-select>
+                        </nz-form-control>
+                    </nz-form-item>
+
+                    <nz-form-item>
+                        <nz-form-label nzFor="studentClass">Type</nz-form-label>
+                        <nz-form-control nzErrorTip="This Input is Required">
+                            <nz-select nzShowSearch nzAllowClear nzPlaceHolder="Select a Type" formControlName="type">
+                                <nz-option *ngFor="let type of listOfType" nzLabel="{{ type }}"
+                                    nzValue="{{ type }}"></nz-option>
+                            </nz-select>
+                        </nz-form-control>
+                    </nz-form-item>
+
+                    <nz-form-item>
+                        <nz-form-label  nzFor="studentClass">Transmission</nz-form-label>
+                        <nz-form-control nzErrorTip="This Input is Required">
+                            <nz-select nzShowSearch nzAllowClear nzPlaceHolder="Select a Transmission"
+                                formControlName="transmission">
+                                <nz-option *ngFor="let transmission of listOfTransmission" nzLabel="{{ transmission }}"
+                                    nzValue="{{ transmission }}"></nz-option>
+                            </nz-select>
+                        </nz-form-control>
+                    </nz-form-item>
+
+                    <nz-form-item>
+                        <nz-form-label  nzFor="gender">Color</nz-form-label>
+                        <nz-form-control nzErrorTip="This Input is Required">
+                            <nz-select nzShowSearch nzAllowClear nzPlaceHolder="Select a Color" formControlName="color">
+                                <nz-option *ngFor="let color of listOfColor" nzLabel="{{ color }}"
+                                    nzValue="{{ color }}"></nz-option>
+                            </nz-select>
+                        </nz-form-control>
+                    </nz-form-item>
+
+                </div>
+                <div class="filter-select-dropdown filter-fields-width">
+                    <button class="filterBtn" nz-button nzType="primary" (click)="searchCar()">Search</button>
+                </div>
+            </div>
+        </div>
+    </nz-spin>
+
+    
+</div>
+
+<!-- <div>
+
+    <div class="child" style="padding-bottom: 30px;" *ngFor="let car of searchedCars">
+        <div nz-row>
+            <div nz-col nzSpan="8">
+                <img class="profile" style="height: 130px; width: 200px; border-radius: 10px;"
+                [src]="'images/' + car.img" alt="Car Img">
+            </div>
+            <div nz-col nzSpan="16">
+                <h2>{{car.brand}} - {{car.name}}</h2>
+                <p>{{car.description}}</p>
+                <hr>
+                <h5 class="car-details">
+                    <span>Price: <b>₹{{car.price}}</b></span> |
+                    <span>Color: <b>{{car.color}}</b></span> |
+                    <span>Transmission: <b>{{car.transmission}}</b></span> |
+                    <span>Type: <b>{{car.type}}</b></span> |
+                    <span>Year: <b>{{car.year | date: 'yyyy'}}</b></span>
+                </h5>
+                <hr>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+
+<!-- <div class="parent">
+    <div class="child car-card" style="padding-bottom: 30px;" *ngFor="let car of searchedCars">
+        <div nz-row>
+            <div nz-col nzSpan="8">
+                <img class="profile car-image" [src]="'images/' + car.img" alt="Car Img">
+            </div>
+            <div nz-col nzSpan="16">
+                <h2>{{car.brand}} - {{car.name}}</h2>
+                <p>{{car.description}}</p>
+                <hr>
+                <h5 class="car-details">
+                    <span>Price: <b>₹{{car.price}}</b></span> |
+                    <span>Color: <b>{{car.color}}</b></span> |
+                    <span>Transmission: <b>{{car.transmission}}</b></span> |
+                    <span>Type: <b>{{car.type}}</b></span> |
+                    <span>Year: <b>{{car.year | date: 'yyyy'}}</b></span>
+                </h5>
+                <hr>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+
+<div class="parent">
+    <div class="child">
+        <div class="car-list">
+            <div class="car-card" *ngFor="let car of searchedCars">
+                <div class="car-content">
+                    <div class="car-image-container">
+                        <img class="car-image" [src]="'images/' + car.img" alt="Car Img">
+                    </div>
+                    <div class="car-details-container">
+                        <h2>{{ car.brand }} - {{ car.name }}</h2>
+                        <p>{{ car.description }}</p>
+                        <hr>
+                        <h5 class="car-details">
+                            <span>Price: <b>₹{{ car.price }}</b></span> |
+                            <span>Color: <b>{{ car.color }}</b></span> |
+                            <span>Transmission: <b>{{ car.transmission }}</b></span> |
+                            <span>Type: <b>{{ car.type }}</b></span> |
+                            <span>Year: <b>{{ car.year | date: 'yyyy' }}</b></span>
+                        </h5>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
