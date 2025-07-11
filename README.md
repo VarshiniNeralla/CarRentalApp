@@ -46,6 +46,6 @@ Start the server:
 json-server --watch db.json
 Visit API: http://localhost:3000
 
-🧑‍💻 Author
+Author
 Varshini Neralla
 📧 varshinineralla9@gmail.com
