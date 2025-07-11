@@ -25,27 +25,27 @@ A simple and intuitive Car Rental Management System built with **Angular** for t
 - Manage inventory
 
 
-## 🚀 Getting Started
+## Getting Started
 
 1. Clone the Repository
 git clone https://github.com/yourusername/car-rental-app.git
 cd car-rental-app
 
 2️. Install Dependencies
-npm install
+**npm install**
 
 3️. Run Angular App
-ng serve
+**ng serve**
 Visit: http://localhost:4200
 
 4️. Set Up JSON Server (Mock Backend)
 Install JSON Server globally if not already installed:
-npm install -g json-server
+**npm install -g json-server**
 
 Start the server:
-json-server --watch db.json
+**json-server --watch db.json**
 Visit API: http://localhost:3000
 
-Author
-Varshini Neralla
-📧 varshinineralla9@gmail.com
+**Author**
+**Varshini Neralla**
+For ay queries: **varshinineralla9@gmail.com**
